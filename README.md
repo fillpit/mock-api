@@ -2,7 +2,7 @@
 
 可配置的 Mock API 服务,支持 Web 界面管理接口、身份验证、CORS 配置,可部署到 Cloudflare Workers 和 Docker。
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/your-username/your-repo)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/fillpit/mock-api)
 
 ## ✨ 功能特点
 
