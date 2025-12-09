@@ -8,11 +8,14 @@
         "start": "node dist/node.js",
         "dev:worker": "wrangler dev",
         "build": "tsc",
+        "upload-static": "node scripts/upload-static-files.js",
         "deploy": "wrangler deploy",
+        "deploy:full": "npm run build && npm run upload-static && npm run deploy",
         "docker:build": "docker build -t mock-api-server .",
         "docker:run": "docker run -p 3000:3000 mock-api-server"
     },
     "dependencies": {
+        "@cloudflare/kv-asset-handler": "^0.4.1",
         "@hono/node-server": "^1.13.0",
         "hono": "^4.6.0"
     },

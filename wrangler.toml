@@ -1,5 +1,5 @@
 name = "mock-api-server"
-main = "src/index.ts"
+main = "dist/index.js"
 compatibility_date = "2024-11-01"
 
 [vars]
@@ -10,7 +10,4 @@ ADMIN_USERNAME = "admin"
 
 [[kv_namespaces]]
 binding = "MOCK_KV"
-id = "your-kv-namespace-id"
-
-[site]
-bucket = "./public"
+id = "c31ff2e799ca4438a1063d863f633574"

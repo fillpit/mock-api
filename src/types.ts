@@ -70,6 +70,9 @@ export interface Env {
     JWT_SECRET: string;
     DATA_PATH?: string;
     PORT?: string;
+    // Workers Sites bindings for static content
+    __STATIC_CONTENT?: KVNamespace;
+    __STATIC_CONTENT_MANIFEST?: string;
 }
 
 // JWT Payload
