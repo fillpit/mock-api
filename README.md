@@ -47,6 +47,19 @@ docker run -p 3000:3000 \
 
 ### Cloudflare Workers 部署
 
+#### 🎯 方式一：自动化部署（推荐）
+
+**无需本地操作！** 只需在 GitHub 和 Cloudflare 配置，即可实现自动部署。
+
+👉 **[查看详细的自动化部署指南](DEPLOYMENT.md)**
+
+简要步骤：
+1. 将代码推送到 GitHub
+2. 在 GitHub 仓库设置中添加 Cloudflare 凭据（Secrets）
+3. 每次推送代码自动部署 ✨
+
+#### 方式二：手动部署
+
 1. 创建 KV 命名空间:
 ```bash
 wrangler kv:namespace create MOCK_KV
@@ -60,9 +73,9 @@ wrangler secret put ADMIN_PASSWORD
 wrangler secret put JWT_SECRET
 ```
 
-4. 部署:
+4. 上传静态文件并部署:
 ```bash
-npm run deploy
+npm run deploy:full
 ```
 
 ## 📖 使用指南
