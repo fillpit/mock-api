@@ -7,10 +7,9 @@
         "dev": "npm run build && node --watch dist/node.js",
         "start": "node dist/node.js",
         "dev:worker": "wrangler dev",
-        "build": "tsc",
-        "upload-static": "node scripts/upload-static-files.js",
-        "deploy": "wrangler deploy",
-        "deploy:full": "npm run build && npm run upload-static && npm run deploy",
+        "bundle": "node scripts/bundle-assets.js",
+        "build": "npm run bundle && tsc",
+        "deploy": "npm run build && wrangler deploy",
         "docker:build": "docker build -t mock-api-server .",
         "docker:run": "docker run -p 3000:3000 mock-api-server"
     },
